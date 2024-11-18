@@ -1,5 +1,5 @@
 import "./styles.css";
-import {renderExistingProjects, addNewProject} from './dom';
+import {reconstructProjects, addNewProject} from './dom';
 
 
 
@@ -7,7 +7,7 @@ const addProjectBtn = document.querySelector(".add-project-btn");
 // const addTaskBtn = document.querySelector(".add-task-btn");
 
 document.addEventListener("DOMContentLoaded", () => {
-    renderExistingProjects();
+    reconstructProjects();
     addProjectBtn.addEventListener('click', addNewProject);
    // addTaskBtn.addEventListener('click', addTaskBtn);
 });

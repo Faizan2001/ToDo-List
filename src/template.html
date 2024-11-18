@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="header">To Do List</div>
-        
-        <div class="projects-section">
-            <button class="add-project-btn">Add Project</button>
-            <div class="projects-list"></div>
-        </div>
-        <div class="tasks-section">
-            
-            <div class="tasks-list"></div>
-        </div>
+  <div class="container">
+    <div class="header">To-Do List</div>
+
+    <div class="projects-section">
+      <button class="add-project-btn">Add Project</button>
+      <div class="projects-list"></div>
     </div>
+    <div class="tasks-section">
+      <div class="tasks-list"></div>
+    </div>
+
+    <!-- Modal for Adding New Task -->
+    <div id="taskModal" class="modal">
+      <div class="modal-content">
+        <h2>Add New Task</h2>
+        <label for="taskTitleInput">Task Title:</label>
+        <input type="text" id="taskTitleInput" placeholder="Enter task title" />
+
+        <label for="taskDescriptionInput">Task Description:</label>
+        <textarea id="taskDescriptionInput" placeholder="Enter task description"></textarea>
+
+        <label for="dueDateInput">Due Date:</label>
+        <input type="date" id="dueDateInput" />
+
+        <label for="prioritySelect">Priority:</label>
+        <select id="prioritySelect">
+          <option value="H">High</option>
+          <option value="M">Medium</option>
+          <option value="L">Low</option>
+        </select>
+
+        <div class="modal-actions">
+          <button id="taskModalSubmit" class="modal-btn">Submit</button>
+          <button id="taskModalCancel" class="modal-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<script type="module" src="dom.js"></script> -->
 </body>
 </html>
